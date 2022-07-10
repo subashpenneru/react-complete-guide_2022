@@ -7,6 +7,8 @@ const NewExpense = ({ onAddExpense }) => {
   const saveExpenseDataHandler = (data) => {
     const expenseData = {
       ...data,
+      amount: parseInt(data.amount),
+      date: new Date(data.date),
       id: Math.random().toString(),
     };
 

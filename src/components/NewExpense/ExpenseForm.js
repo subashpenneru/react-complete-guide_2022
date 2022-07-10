@@ -10,15 +10,8 @@ const ExpenseForm = ({ onSaveExpenseData }) => {
   });
 
   const inputChangeHandler = (e) => {
-    console.log(e.target.value);
     const name = e.target.name;
     let val = e.target.value;
-
-    if (name === 'amount') {
-      val = parseInt(val);
-    } else if (name === 'date') {
-      val = new Date(val);
-    }
 
     setExpenseData((prev) => ({
       ...prev,
